@@ -24,13 +24,8 @@ import time
 ### may be modified without concern, if required. ("View" Part 1)         ###
 ###-----------------------------------------------------------------------###
 # The format for this section is: default, range[Lower, Upper, Step Size]
-d_lat, r_lat = 35, [ -90,  90, 2] # Latitude
-d_lon, r_lon = 80,  [-180, 180, 2] # Longitude
-d_year, r_year = 2005, [1983, 2005, 1]    # Year
-
-#for testing
-d_lat, r_lat = 0, [ -90,  90, 2] # Latitude
-d_lon, r_lon = 0,  [-180, 180, 2]  # Longitude
+d_lat, r_lat = 0, [ -90,  90, 5] # Latitude
+d_lon, r_lon = 0,  [-180, 180, 5]  # Longitude
 d_year, r_year = 2005, [1983, 2005, 1]    # Year
 
 
@@ -76,7 +71,7 @@ ctl_inputs = widgetbox(ctl_title, ctl_lat, ctl_lon, ctl_year)
 ###-----------------------------------------------------------------------###
 # Generating some initial data for the plots, based on the parameter defaults
 
-d_data_2 = pd.read_csv('./data/insolation_data_1983-2005_trimmed.csv')
+d_data_2 = pd.read_csv('./data/insolation_data_1983-2005_super_trimmed.csv')
 
 time.sleep(0.5)
 
